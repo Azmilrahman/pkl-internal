@@ -17,7 +17,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Sinopsis</label>
-                            <input type="text" name="tahun" value="{{ $movie->sinopsis }}" class="form-control" readonly>
+                            <textarea name="" id="sinopsis" cols="30" rows="10"  class="form-control" readonly>{{ $movie->sinopsis }} </textarea>
+                            {{-- <input type="" name="tahun" value="{{ $movie->sinopsis }}" class="form-control" readonly> --}}
                         </div>
                         <div class="form-group">
                             <label for="">Durasi Film</label>

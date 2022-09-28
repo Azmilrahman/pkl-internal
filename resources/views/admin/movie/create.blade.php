@@ -87,11 +87,16 @@
                                     @foreach ($casting as $data)
                                         <option value="{{ $data->id }}">{{ $data->nama }}</option>
                                     @endforeach
+                                    @error('casting')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 </select>
                                 @error('casting')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
-                                    </span>
+                                    </span> 
                                 @enderror
                             </div>
                             <div class="form-group">
