@@ -53,8 +53,13 @@
                             <ol>
                                 @foreach ($movie->casting as $item)
                                     <li> {{ $item->nama }}</li>
+                                    <p>
+                                        <img src="{{ asset('images/casting/' . $movie->foto) }}"
+                                            class="img-rounded img-responsive" style="width: 175px; height:175px;" alt="">
+                                    </p>
                                 @endforeach
                             </ol>
+                           
                         </div>
                     </div>
                 </div>

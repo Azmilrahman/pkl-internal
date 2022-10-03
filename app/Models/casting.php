@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Alert;
 
 class Casting extends Model
 {
@@ -20,6 +21,7 @@ class Casting extends Model
         // fk id movie dan id_casting
         return $this->belongsToMany(Movie::class,
             'casting_movies', 'id_casting', 'id_movie');
+
     }
     public function image()
     {
@@ -39,18 +41,18 @@ class Casting extends Model
         }
     }
 
-    // public function movie()
-    // {
-    //     parent::boot();
+    public static function boot()
+    {
+        parent::boot();
 
-    //     self::deleting(function($casting){
-    //         if ($casting->movie->count() > 0) {
-                // Alert::
-    //             return false;
-    //         }
-
-    //     });
-
-    //     return $this->hasMany(Movie::class, 'id_casting');
-    // }
+        self::deleting(function($casting){
+            if ($casting->movie->count() > 0) {
+                Alert::error('Gagal Menghapus', 'Nama Casting : ' .$casting->nama);
+                return false;
+            }
+            else {
+                Alert::success('Berhasil', 'Data Berhasil Dihapus');
+                }
+        });
+    }        
 }

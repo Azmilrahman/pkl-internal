@@ -58,14 +58,14 @@ class GenreController extends Controller
 
     public function destroy($id)
     {
-        if(Genre::destroy($id)) {
+        if(Genre::destroy( $id)) {
             return redirect()->back();
         }
         return redirect()->route('genre.index');
-        // $genres = genre::findOrFail($id);
-        // $genres->delete();
-        // Alert::success('Done', 'Data berhasil dIhapus');
-        // return redirect()->route('genre.index');
+        $genres = genre::findOrFail($id);
+        $genres->delete();
+        Alert::success('Done', 'Data berhasil dIhapus');
+        return redirect()->route('genre.index');
 
     }
 }

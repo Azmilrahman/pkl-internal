@@ -103,9 +103,9 @@
 
                             <div class="form-group">
                                 <label for="">Casting</label>
-                                <select name="casting" 
+                                <select name="casting[]" 
                                 class="form-control @error('casting') is-invalid @enderror"
-                                    id="">
+                                    id="" multiple>
                                     <option>Pilih</option>
                                     @foreach ($casting as $data)
                                         <option value="{{ $data->id }}"

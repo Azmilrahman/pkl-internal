@@ -117,10 +117,11 @@ class CastingController extends Controller
 
     public function destroy($id)
     {
-        $casting = Casting::findOrFail($id);
-        $casting->deleteImage();
-        $casting->delete();
+        if(Casting::destroy( $id)) {
+            return redirect()->back();
+        }
         return redirect()->route('casting.index');
 
     }
+    
 }

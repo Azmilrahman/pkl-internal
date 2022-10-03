@@ -87,9 +87,12 @@ class TahunRilisController extends Controller
 
     public function destroy($id)
     {
-        $tahun = tahun_rilis::findOrFail($id);
-        $tahun->delete();
-        Alert::success('Done', 'Data berhasil dihapus')->autoClose(2000);
+        // $tahun = tahun_rilis::findOrFail($id);
+        // $tahun->delete();
+        // Alert::success('Done', 'Data berhasil dihapus')->autoClose(2000);
+        if(!tahun_rilis::destroy($id)){
+            return redirect()->back();
+        }
         return redirect()->route('tahun_rilis.index');
 
     }

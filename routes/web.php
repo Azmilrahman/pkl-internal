@@ -1,14 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\ProvinsiController;
 
 use App\Http\Controllers\DurasiFilmController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ReviewerController;
 use App\Http\Controllers\CastingController;
 use App\Http\Controllers\TahunRilisController;
+use Illuminate\Support\Facades\Route;
+
 
 // edit
 
@@ -70,3 +73,6 @@ Route::get('/errors', function () {
 // Route::group(['prefix' => 'admin', 'middleware'=>['auth']], function {} {
 //  Route::resource('provinsis', ProvinsiContorller::class);
 // });
+
+Route::get('/', [FrontController::class, 'index']);
+Route::get('movies', [FrontController::class, 'movies']);

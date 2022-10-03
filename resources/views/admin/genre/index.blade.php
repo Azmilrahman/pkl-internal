@@ -17,6 +17,7 @@
                                 <thead>
                                     <th>No</th>
                                     <th>Nama Kategori</th>
+                                    <th>Jumlah Film</th>
                                     <th>Aksi</th>
                                 </thead>
                                 <tbody>
@@ -25,6 +26,7 @@
                                         <tr>
                                             <td>{{ $no++ }}</td>
                                             <td>{{ $genre->kategori }}</td>
+                                            <td>{{ $genre->movie->count() }}</td>
                                             <td>
                                                 <form action="{{ route('genre.destroy', $genre->id) }}" method="post">
                                                     @csrf

@@ -27,6 +27,9 @@ class genre extends Model
                 Alert::error('Gagal Menghapus', 'Nama Genre : ' .$genre->kategori);
                 return false;
             }
+            else {
+              Alert::success('Berhasil', 'Data Berhasil Dihapus');
+            }
 
         });
     }
