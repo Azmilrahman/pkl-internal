@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('background');
             $table->string('cover');
             $table->integer('durasi');
-            $table->unsignedBigInteger('id_tahun_rilis');
-            $table->unsignedBigInteger('id_genre');
+            $table->unsignedBigInteger('id_tahun_rilis')->unsigned();
+            $table->unsignedBigInteger('id_genre')->unsigned();
 
             // relasi
             // fk id_tahun_rilis

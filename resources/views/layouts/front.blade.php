@@ -1,121 +1,230 @@
-<!DOCTYPE HTML>
-<html lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Moviepoint - Online Movie,Vedio and TV Show HTML Template</title>
-    <!-- Favicon Icon -->
-    <link rel="icon" type="image/png" href="{{ asset('assets/front/img/favcion.png') }}" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/bootstrap.min.css') }}" media="all" />
-    <!-- Slick nav CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/slicknav.min.css') }}" media="all" />
-    <!-- Iconfont CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/icofont.css') }}" media="all" />
-    <!-- Owl carousel CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/owl.carousel.css') }}">
-    <!-- Popup CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/magnific-popup.css') }}">
-    <!-- Main style CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/style.css') }}" media="all" />
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/front/css/responsive.css') }}" media="all" />
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js')}}"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js')}}"></script>
-  <![endif]-->
+<title>Home</title>
+<meta charset="utf-8">
+<meta name = "format-detection" content = "telephone=no" />
+<link rel="icon" href="{{ asset('assets/front/images/favicon.ico') }}">
+<link rel="shortcut icon" href="{{ asset('assets/front/images/favicon.') }}ico" />
+<link rel="stylesheet" href="{{ asset('assets/front/css/touchTouch.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/front/css/camera.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
+<script src="{{ asset('assets/front/js/jquery.js') }}"></script>
+<script src="{{ asset('assets/front/js/jquery-migrate-1.1.1.js') }}"></script>
+<script src="{{ asset('assets/front/js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ asset('assets/front/js/script.js') }}"></script>
+<script src="{{ asset('assets/front/js/superfish.js') }}"></script>
+<script src="{{ asset('assets/front/js/jquery.equalheights.js') }}"></script>
+<script src="{{ asset('assets/front/js/jquery.mobilemenu.js') }}"></script>
+<script src="{{ asset('assets/front/js/tmStickUp.js') }}"></script>
+<script src="{{ asset('assets/front/js/jquery.ui.totop.js') }}"></script>
+<script src="{{ asset('assets/front/js/touchTouch.jquery.js') }}"></script>
+<script src="{{ asset('assets/front/js/camera.js') }}"></script>
+<!--[if (gt IE 9)|!(IE)]><!-->
+<script src="{{ asset('assets/front/js/jquery.mobile.customized.min.js') }}"></script>
+<!--<![endif]-->
+<script>
+ $(window).load(function(){
+  $().UItoTop({ easingType: 'easeOutQuart' });
+  $('#camera_wrap').camera({
+    loader: false,
+    pagination: false ,
+    minHeight: '400',
+    thumbnails: true,
+    height: '46.32478632478632%',
+    caption: false,
+    navigation: false,
+    fx: 'mosaic'
+  });
+  $('.gallery .gall_item').touchTouch();
+ });
+</script>
+ <div style=' clear: both; text-align:center; position: relative;'>
+   <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+   </a>
+</div>
+<script src="{{ asset('assets/front/js/html5shiv.js') }}"></script>
+<link rel="stylesheet" media="screen" href="{{ asset('assets/front/css/ie.css') }}">
 </head>
-
-<body>
-    <!-- Page loader -->
-    <div id="preloader"></div>
-    <!-- header section start -->
-    @include('layouts.components.front.nav')
-
-    <!-- Content Area -->
-    @yield('content')
-    <!-- Content Area End -->
-    <!-- header section end -->
-    <!-- footer section start -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <img src="{{ asset('assets/front/img/logo.png') }}" alt="about" />
-                        <p>7th Harley Place, London W1G 8LZ United Kingdom</p>
-                        <h6><span>Call us: </span>(+880) 111 222 3456</h6>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4>Legal</h4>
-                        <ul>
-                            <li><a href="#">Terms of Use</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Security</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4>Account</h4>
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Watchlist</a></li>
-                            <li><a href="#">Collections</a></li>
-                            <li><a href="#">User Guide</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="widget">
-                        <h4>Newsletter</h4>
-                        <p>Subscribe to our newsletter system now to get latest news from us.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Enter your email.." />
-                            <button>SUBSCRIBE NOW</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <hr />
+<body class="page1" id="top">
+<!--==============================
+              header
+=================================-->
+<div class="main">
+<header>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1 class="logo">
+        <a href="index.html">MOVIE<span>your dance school</span>
+        </a>
+      </h1>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <section id="stuck_container">
+  <!--==============================
+              Stuck menu
+  =================================-->
+    <div class="container_12">
+        <div class="grid_12">
+          <div class="navigation ">
+            <nav>
+              <ul class="sf-menu">
+               <li class="current"><a href="index.html">Home</a></li>
+               <li><a href="about.html">About</a></li>
+               <li><a href="classes.html">Classes</a></li>
+               <li><a href="staff.html">Staff</a></li>
+               <li><a href="contacts.html">Contacts</a></li>
+             </ul>
+            </nav>
+            <div class="clear"></div>
+          </div>
+         <div class="clear"></div>
+     </div>
+     <div class="clear"></div>
+    </div>
+  </section>
+</header>
+<section class="slider_wrapper">
+  <div class="container_12">
+    <div class="grid_12">
+      <div id="camera_wrap" class="">
+        <div data-src="images/slide-1.jpg" data-thumb="images/thumb-2.jpg"></div>
+        <div data-src="images/slide-2.jpg" data-thumb="images/thumb-3.jpg"></div>
+        <div data-src="images/slide-3.jpg" data-thumb="images/thumb-1.jpg"></div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+<!--=====================
+          Content
+======================-->
+<section id="content"><div class="ic">More Website Templates @ TemplateMonster.com - October 06, 2014!</div>
+  <div class="container_12">
+    <div class="grid_12">
+      <img src="{{ asset('assets/front/images/page1_img1.jpg') }}" alt="" class="fleft">
+      <h2>The Way You Move </h2>
+      <p>Find more about this <a href="http://blog.templatemonster.com/free-website-templates/" rel="nofollow" class="color1">goodie</a> in the post on the blog. </p>
+      <p> <a href="http://www.templatemonster.com/properties/topic/education-books/" rel="nofollow" class="color1">Education website templates</a> are presented in the same name category at TemplateMonster.com. </p>
+      Amus at magna non nunc tristique rhoncusquam nibh antegestas id dictum
+      <br>
+      <a href="#" class="link-1">more</a>
+    </div>
+    <div class="grid_3">
+      <div class="banner">
+        <div class="maxheight">
+          <h4>News &amp; <br> Events</h4>
+          <a href="#" class="link-1">more</a>
         </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 text-center text-lg-left">
-                        <div class="copyright-content">
-                            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 text-center text-lg-right">
-                        <div class="copyright-content">
-                            <a href="#" class="scrollToTop">
-                                Back to top<i class="icofont icofont-arrow-up"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="banner">
+        <div class="maxheight">
+          <h4>Master <br> Classes</h4>
+          <a href="#" class="link-1">more</a>
         </div>
-    </footer><!-- footer section end -->
-    <!-- jquery main JS -->
-    <script src="{{ asset('assets/front/js/jquery.min.js') }}"></script>
-    <!-- Bootstrap JS -->
-    <script src="{{ asset('assets/front/js/bootstrap.min.js') }}"></script>
-    <!-- Slick nav JS -->
-    <script src="{{ asset('assets/front/js/jquery.slicknav.min.js') }}"></script>
-    <!-- owl carousel JS -->
-    <script src="{{ asset('assets/front/js/owl.carousel.min.js') }}"></script>
-    <!-- Popup JS -->
-    <script src="{{ asset('assets/front/js/jquery.magnific-popup.min.js') }}"></script>
-    <!-- Isotope JS -->
-    <script src="{{ asset('assets/front/js/isotope.pkgd.min.js') }}"></script>
-    <!-- main JS -->
-    <script src="{{ asset('assets/front/js/main.js') }}"></script>
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="banner">
+        <div class="maxheight">
+          <h4>Popular <br> Music</h4>
+          <a href="#" class="link-1">more</a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_3">
+      <div class="banner">
+        <div class="maxheight">
+          <h4>Useful <br> Tips</h4>
+          <a href="#" class="link-1">more</a>
+        </div>
+      </div>
+    </div>
+    <div class="grid_6">
+      <h3>Recent Publications</h3>
+      <div class="grid_3 alpha">
+        <div class="block-1">
+          <h4 class="color1"><a href="#">How to Join</a></h4>
+          Amus at magna non nunc tristique rhoncus. Aliquam nibh antegestas id dictum acoodo
+          <br>
+          <a href="#" class="link-1">more</a>
+        </div>
+      </div>
+      <div class="grid_3 omega">
+        <div class="block-1">
+          <h4 class="color1"><a href="#">Our Styles</a></h4>
+          Amus at magna non nunc tristique rhoncus. Aliquam nibh antegestas id dictum acoodo
+          <br>
+          <a href="#" class="link-1">more</a>
+        </div>
+      </div>
+      <div class="grid_3 alpha">
+        <div class="block-1">
+          <h4 class="color1"><a href="#">Schedule</a></h4>
+          Remus at magna non nunc tristique rhoncus. Aliquam nibh antegestas id dictum acoodot
+          <br>
+          <a href="#" class="link-1">more</a>
+        </div>
+      </div>
+      <div class="grid_3 omega">
+        <div class="block-1">
+          <h4 class="color1"><a href="#">Flexibility &amp; Strength</a></h4>
+          Omus at magna non nunc tristique rhoncus. Aliquam nibh antegestas id dictum acoodoe
+          <br>
+          <a href="#" class="link-1">more</a>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="grid_5 prefix_1 gallery">
+      <a href="{{ asset('assets/front/images/big1.jpg" class="gall_item}') }}">
+        <img src="{{ asset('assets/front/images/page1_img2.jpg') }}" alt="">
+        <div class="gall_bot">
+          <div class="fa fa-camera"></div>
+        </div>
+      </a>
+    </div>
+    <div class="clear"></div>
+  </div>
+</section>
+<div class="footer-top">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="sep-1"></div>
+    </div>
+    <div class="grid_4">
+      <address class="address-1"> <div class="fa fa-home"></div>28 Jackson Blvd Ste 1020 Chicago,  <br>
+IL 60604-2340</address>
+    </div>
+    <div class="grid_3">
+      <a href="#" class="mail-1"><span class="fa fa-envelope"></span>info@demolink.org</a>
+    </div>
+    <div class="grid_4 fright">
+      <div class="socials">
+        <a href="#">facebook</a>
+        <a href="#">twitter</a>
+        <a href="#">google+</a>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<!--==============================
+              footer
+=================================-->
+</div>
+<footer id="footer">
+  <div class="container_12">
+    <div class="grid_12">
+      <div class="sub-copy">MOVIE &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> <br> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</footer>
+<a href="#" id="toTop" class="fa fa-angle-up"></a>
 </body>
-
 </html>
