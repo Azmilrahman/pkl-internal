@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name = "format-detection" content = "telephone=no" />
 <link rel="icon" href="{{ asset('assets/front/images/favicon.ico') }}">
-<link rel="shortcut icon" href="{{ asset('assets/front/images/favicon.') }}ico" />
+<link rel="shortcut icon" href="{{ asset('assets/front/images/favicon.ico') }}" />
 <link rel="stylesheet" href="{{ asset('assets/front/css/touchTouch.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/front/css/camera.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
@@ -39,13 +39,17 @@
   $('.gallery .gall_item').touchTouch();
  });
 </script>
+<!--[if lt IE 8]>
  <div style=' clear: both; text-align:center; position: relative;'>
    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+     <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg') }}" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
    </a>
 </div>
+<![endif]-->
+<!--[if lt IE 9]>
 <script src="{{ asset('assets/front/js/html5shiv.js') }}"></script>
 <link rel="stylesheet" media="screen" href="{{ asset('assets/front/css/ie.css') }}">
+<![endif]-->
 </head>
 <body class="page1" id="top">
 <!--==============================
@@ -56,7 +60,7 @@
   <div class="container_12">
     <div class="grid_12">
       <h1 class="logo">
-        <a href="index.html">MOVIE<span>your dance school</span>
+        <a href="index.html">MOVIE<span>Enjoy Your Film</span>
         </a>
       </h1>
     </div>
@@ -90,9 +94,9 @@
   <div class="container_12">
     <div class="grid_12">
       <div id="camera_wrap" class="">
-        <div data-src="images/slide-1.jpg" data-thumb="images/thumb-2.jpg"></div>
-        <div data-src="images/slide-2.jpg" data-thumb="images/thumb-3.jpg"></div>
-        <div data-src="images/slide-3.jpg" data-thumb="images/thumb-1.jpg"></div>
+        <div data-src="{{ asset('assets/front/images/slide-1.jpg') }}" data-thumb="{{ asset('assets/front/images/thumb-2.jpg') }}"></div>
+        <div data-src="{{ asset('assets/front/images/slide-2.jpg') }}" data-thumb="{{ asset('assets/front/images/thumb-3.jpg') }}"></div>
+        <div data-src="{{ asset('assets/front/images/slide-3.jpg') }}" data-thumb="{{ asset('assets/front/images/thumb-1.jpg') }}"></div>
       </div>
     </div>
     <div class="clear"></div>
@@ -181,7 +185,7 @@
       <div class="clear"></div>
     </div>
     <div class="grid_5 prefix_1 gallery">
-      <a href="{{ asset('assets/front/images/big1.jpg" class="gall_item}') }}">
+      <a href="{{ asset('assets/front/images/big1.jpg') }}" class="gall_item">
         <img src="{{ asset('assets/front/images/page1_img2.jpg') }}" alt="">
         <div class="gall_bot">
           <div class="fa fa-camera"></div>
@@ -220,7 +224,7 @@ IL 60604-2340</address>
 <footer id="footer">
   <div class="container_12">
     <div class="grid_12">
-      <div class="sub-copy">MOVIE &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> <br> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
+      <div class="sub-copy">MOVE &copy; <span id="copyright-year"></span> | <a href="#">Privacy Policy</a> <br> Website designed by <a href="http://www.templatemonster.com/" rel="nofollow">TemplateMonster.com</a></div>
     </div>
     <div class="clear"></div>
   </div>
